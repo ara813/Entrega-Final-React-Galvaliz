@@ -1,38 +1,85 @@
-.App {
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'IM Fell English', serif;
+}
+.header {
+  padding: 10%;
+  background: radial-gradient(circle, rgba(63,251,161,1) 0%, rgba(252,70,107,1) 100%);
+}
+.main {
+  padding: 20%;
+  color: rgba(234, 103, 103, 0.705);
+}
+.footer {
+padding: 10%;
+color: rgb(88, 87, 87);
+background: radial-gradient(circle, rgba(63,251,161,1) 0%, rgba(252,70,107,1) 100%);
+padding-left: 30%;
+}
+.logo{
+  border-radius: 50%;
+  margin-left: 40%;
+}
+.offcanvas{
+  color: rgb(88, 87, 87);
+  background-color: rgba(234, 103, 103, 0.705);
+}
+.navbar-toggler{
+  color: rgb(88, 87, 87);
+  background-color: rgba(234, 103, 103, 0.705);
+}
+.container-fluid{
+  background-color: white;
+}
+.cartw{
+  display: flex;
+  flex-direction: row;
+  color:rgba(234, 103, 103, 0.705);
+  margin-top: 2%;
+  font-size: x-large;
+}
+.inicio{
+  text-align: center;
+  margin-top: 6%;
+}
+.li{
+  font-size: larger;
+}
+.nav-link{
+  color:rgb(88, 87, 87); 
+}
+.nav-item{
+  color:rgb(88, 87, 87);
+}
+.container{
+  margin: 8%;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn{
+  background-color: aliceblue;
+  border-color: aliceblue;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn:hover{
+  background-color: rgba(243, 158, 158, 0.221);
+  border-color: aliceblue;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.badge{
+  color: brown;
+}
+.redes{
+  padding: 2%;
+  margin-right: 40%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
 }
-
-.App-link {
-  color: #61dafb;
+.carousel-inner{
+  display: flex;
+  flex-direction: row;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pedidoF{
+  margin-left: 18%;
 }
