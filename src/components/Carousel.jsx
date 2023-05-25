@@ -1,8 +1,10 @@
-import Alfajorcitos from "./img/alfajorcitos.jpg";
-import BO from "./img/biscochos de oregano.jpg";
-import Bombas from "./img/bombas.jpg";
-import Brownies from "./img/bownies.jpg";
+import Alfajorcitos from "../assets/img/alfajorcitos.jpg";
+import BO from "../assets/img/biscochos.jpg";
+import Bombas from "../assets/img/bombas.jpg";
+import Brownies from "../assets/img/bownies.jpg";
+
 const Carousel = () => {
+    
     return(
         <div className="container-fluid">
         <div className="row">
@@ -36,4 +38,5 @@ const Carousel = () => {
     </div>
     )
   }
+  
   export default Carousel;

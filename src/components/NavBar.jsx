@@ -1,11 +1,16 @@
 import CartWidget from "./CartWidget";
+import Logo from "../assets/img/merendarLogo.jpg";
+import Extra from "./Extra";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => { 
-    return (
+    
+  return (
         <div>
         <nav class="navbar bg-body-tertiary fixed-top">
 <div class="container-fluid">
 < CartWidget />
+<img src={Logo} alt="Meren-dar" width={50} className="logoPeque" />
 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -17,16 +22,16 @@ const NavBar = () => {
   <div class="offcanvas-body">
     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="principal.html">Inicio</a>
+        <NavLink className="nav-link" aria-current="page" to={"/destacados"}>Inicio</NavLink>
       </li>
       <li className="nav-item">
-        <a className="nav-link active" aria-current="page" href="productos.html">Productos</a>
+      <Extra/>
       </li>
       <li className="nav-item">
-        <a className="nav-link active" aria-current="page" href="pedidos.html">Pedidos</a>
+        <NavLink className="nav-link" aria-current="page" to={"/pedidos"}>Pedidos</NavLink>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="https://www.instagram.com/merendarsintacc/">Instagram</a>
+        <NavLink className="nav-link" to={"https://www.instagram.com/merendarsintacc/"}>Instagram</NavLink>
       </li>
     </ul>
     <form class="d-flex mt-3" role="search">

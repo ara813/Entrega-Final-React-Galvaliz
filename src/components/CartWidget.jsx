@@ -1,5 +1,6 @@
 const CartWidget = () => { 
-        return(
+        
+    return(
             <div>
                 <button type="button" class="btn btn-primary">
       🛒 <span class="badge badge-light">4</span>
@@ -7,4 +8,5 @@ const CartWidget = () => {
             </div>
         )
     }
-export default CartWidget;
+
+    export default CartWidget;
