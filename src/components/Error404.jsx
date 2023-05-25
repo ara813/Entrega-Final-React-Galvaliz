@@ -1,4 +1,5 @@
 const Error404 = () => {
+    
     return(
         <div className="container my-5">
             <div className="row">
@@ -8,6 +9,8 @@ const Error404 = () => {
                 </div>
             </div>
         </div>
+    
     )
  }
+ 
  export default Error404;
