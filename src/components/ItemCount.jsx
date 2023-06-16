@@ -1,46 +1,50 @@
 import { useEffect, useState } from "react";
-
-const ItemCount = ({stock}) => {
-    const [items, setItems] = useState(0);
+import { Link } from "react-router-dom";
+const ItemCount = ({stock, onAdd}) => {
+    const [items, setItems] = useState(1);
     const [itemStock, setItemStock] = useState(stock);
-
-    const agregarAlCarrito = () => {
+    const [itemAdded, setItemAdded] =useState(false)
+    
+    const incrementarStock = () => {
         if (items < itemStock) {
             setItems(items + 1);
         }
     }
 
-    const quitarDelCarrito = () => {
-        if (items > 0) {
+    const decrementarStock = () => {
+        if (items > 1) {
             setItems(items - 1);
         }
     }
-
-    const onAdd = () => {
+    
+    const addToCart = () => {
         if (items <= itemStock) {
             setItemStock(itemStock - items);
-            setItems(0);
+            setItems(1);
+            setItemAdded(true);
+            onAdd(items);
+            console.log("Seleccionaste: " + items + " Productos al Carrito!\nTe quedan: " + itemStock + " Productos disponibles!");
         }
     }
-
+    
     useEffect(() => {
         setItemStock(stock);
     }, [stock]);
 
     return (
-        <div className="container-btn">
+        <div className="container">
             <div className="row">
                 <div className="col">
                     <div className="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" className="btn btn-light" onClick={quitarDelCarrito}>-</button>
+                        <button type="button" className="btn btn-light" onClick={decrementarStock}>-</button>
                         <button type="button" className="btn btn-light">{items}</button>
-                        <button type="button" className="btn btn-light" onClick={agregarAlCarrito}>+</button>
+                        <button type="button" className="btn btn-light" onClick={incrementarStock}>+</button>
                     </div>
                 </div>
             </div>
             <div className="row">
                 <div className="col">
-                    <button type="button" className="btn btn-light" onClick={onAdd}>Agregar al Carrito</button>
+                {itemAdded ? <Link to={"/cart"} className="btn btn-light">Finalizar Compra</Link> : <button type="button" className="btn btn-light" onClick={addToCart}>Agregar al Carrito</button>}
                 </div>
             </div>
         </div>        
